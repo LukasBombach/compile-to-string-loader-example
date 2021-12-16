@@ -1,5 +1,5 @@
 /**  * @type {import("webpack").LoaderDefinition} */
-module.exports = async function cheapReplaceLoader(content, map, meta) {
+module.exports = async function compiletoStringLoader(content, map, meta) {
   const callback = this.async();
 
   const result = await this.importModule(this.resourcePath);
