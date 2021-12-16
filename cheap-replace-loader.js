@@ -12,15 +12,15 @@ const replaceWithRequireArgument = `require('${compiledLoader}!$1')`;
 /**
  * This is a cheap demo loader that just tests if an import to
  *
- * import { compileToString } from "../lib/compile-to-string";
+ * "../lib/compile-to-string";
  *
- * exists and replaces calls to `compileToString`
+ * exists and replaces every call to
  *
- * compileToString("../inline/index.ts");
+ * compileToString("SOME_PATH");
  *
  * with this
  *
- * compileToString(require("compile-to-string-loader.js!../inline/index.ts"));
+ * compileToString(require("compile-to-string-loader.js!SOME_PATH"));
  *
  * @type {import("webpack").LoaderDefinition}
  */
